@@ -1,0 +1,85 @@
+#taqwa-popup {
+  animation: popupFadeIn 0.3s ease-out;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#taqwa-overlay {
+  animation: overlayFadeIn 0.3s ease-out;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+  }
+}
+
+/* تأثيرات إضافية للنافذة المنبثقة */
+#taqwa-popup {
+  transition: all 0.3s ease;
+}
+
+#taqwa-popup:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* تأثيرات للأزرار */
+#taqwa-popup a {
+  position: relative;
+  overflow: hidden;
+}
+
+#taqwa-popup a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+#taqwa-popup a:hover::after {
+  transform: translateX(0);
+}
+
+/* تحسين التجاوب مع الشاشات الصغيرة */
+@media (max-width: 480px) {
+  #taqwa-popup {
+    min-width: 90vw;
+    padding: 20px;
+  }
+  
+  #taqwa-popup div:first-child {
+    font-size: 24px;
+  }
+  
+  #taqwa-popup div:nth-child(2) {
+    font-size: 14px;
+  }
+  
+  #taqwa-popup div:nth-child(3) {
+    font-size: 16px;
+  }
+  
+  #taqwa-popup a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+} 
