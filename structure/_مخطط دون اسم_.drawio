@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.0.5">
+  <diagram name="Page-1" id="mAeZYz3uHxk3xn1qdCau">
+    <mxGraphModel dx="1213" dy="604" grid="1" gridSize="14" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" parent="1" source="cnfd4g1KJLZDE4JIrTzS-1" target="cnfd4g1KJLZDE4JIrTzS-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" parent="1" source="cnfd4g1KJLZDE4JIrTzS-1" target="cnfd4g1KJLZDE4JIrTzS-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" parent="1" source="cnfd4g1KJLZDE4JIrTzS-1" target="cnfd4g1KJLZDE4JIrTzS-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="80" y="250" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-2" value="ظهور ايات واحاديث ومواعظ" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="450" y="225" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" parent="1" source="cnfd4g1KJLZDE4JIrTzS-3" target="cnfd4g1KJLZDE4JIrTzS-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-3" value="search in google" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="200" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-4" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" parent="1" source="cnfd4g1KJLZDE4JIrTzS-1" target="cnfd4g1KJLZDE4JIrTzS-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="340" as="sourcePoint" />
+            <mxPoint x="450" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-7" value="اذكار و تذكير و تشجيع علي الاكمال" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="35" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-10" value="📦 AnaAqwa (root)&#xa;│&#xa;├── 🏠 Home Page&#xa;│   ├── 👁️ عرض حكمة أو آية قرآنية&#xa;│   ├── 🔍 شريط بحث (مع فلتر محظورات)&#xa;│   └── 🔗 روابط إلى الأقسام&#xa;│&#xa;├── 🔍 Search&#xa;│   ├── ✅ إذا الكلمة نظيفة → إظهار نتائج عادية&#xa;│   └── 🚫 إذا الكلمة محرمة → عرض آية + موعظة + حديث&#xa;│&#xa;├── 📿 Daily Azkar Section&#xa;│   ├── أذكار الصباح&#xa;│   ├── أذكار المساء&#xa;│   ├── دعاء اليوم&#xa;│   └── سنة نبوية&#xa;│&#xa;├── 📅 Recovery Tracker&#xa;│   ├── بدء التحدي (حفظ التاريخ)&#xa;│   ├── عداد أيام النجاح&#xa;│   └── زر &quot;ابدأ من جديد&quot;&#xa;│&#xa;├── 🧕 Inspirational People&#xa;│   ├── كل شخصية (name, quote, story)&#xa;│   └── قسم دروس مستفادة&#xa;│&#xa;├── 📖 Awareness Section&#xa;│   ├── مقالات توعية (فوائد - أضرار)&#xa;│   ├── فيديوهات محفزة (اختياري)&#xa;│   └── نصائح للاستمرار&#xa;│&#xa;└── ⚙️ Settings (مستقبلًا)&#xa;    ├── تغيير اللون/الوضع الليلي&#xa;    ├── تفعيل إشعارات&#xa;    └── تخصيص الورد المفضل" style="text;whiteSpace=wrap;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry y="820" width="300" height="622" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;" parent="1" source="cnfd4g1KJLZDE4JIrTzS-7" target="cnfd4g1KJLZDE4JIrTzS-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-12" value="&lt;span style=&quot;text-align: left;&quot;&gt;Recovery Tracker&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;هنا يقدر يتابع عدد الايام ولو&amp;nbsp; في يوم انتكس يقدر يعيد الايام من جديد&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="205" y="370" width="131" height="131" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-14" value="&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&amp;nbsp;Inspirational People&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;هنا يقدر يشوف شخصيات ويقرا عن السلف&amp;nbsp;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="202.5" y="514" width="136" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-17" value="&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&amp;nbsp;Awareness Section&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;هنا يقدر يشوف نصائح وخطط للاستمرار&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="205" y="672" width="131" height="131" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-20" value="[ المستخدم ] &#xa;     |&#xa;     v&#xa;[ يكتب كلمة بحث ]&#xa;     |&#xa;     v&#xa;[ نظام فحص الكلمات المحظورة ]&#xa;     |&#xa;    / \&#xa;  نعم  لا&#xa;  /      \&#xa;[ عرض آيات ومواعظ ]   [ عرض نتائج البحث العادية ]" style="text;whiteSpace=wrap;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="770" y="235" width="265" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="cnfd4g1KJLZDE4JIrTzS-21" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;الفكره الاساسية&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="799" y="201" width="112" height="28" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
