@@ -1,24 +1,40 @@
 {
   "manifest_version": 3,
-  "name": "اتقي الله - حماية وتذكير",
+  "name": "Enta Aqwa - حماية المحتوى",
   "version": "1.0",
-  "description": "إضافة لتذكير المستخدم بالله عند البحث عن المحتوى غير اللائق",
+  "description": "امتداد لحماية المحتوى وتذكير المستخدمين بالكلمات المحظورة",
   "permissions": [
+    "storage",
     "activeTab",
     "scripting"
   ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon.png",
+      "48": "assets/icons/icon.png",
+      "128": "assets/icons/icon.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/icon.png",
+    "48": "assets/icons/icon.png",
+    "128": "assets/icons/icon.png"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
-      "css": ["styles.css"],
-      "run_at": "document_start"
+      "css": ["styles.css"]
     }
   ],
-  "action": {
-    "default_title": "اتقي الله - حماية وتذكير"
-  }
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/sounds/*",
+        "assets/icons/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
 } 

@@ -1,7 +1,34 @@
-#taqwa-popup {
-  animation: popupFadeIn 0.3s ease-out;
+/* متغيرات الألوان */
+:root {
+  --primary-color: #2ecc71;
+  --primary-dark: #27ae60;
+  --secondary-color: #e74c3c;
+  --text-color: #2c3e50;
+  --light-text: #7f8c8d;
+  --background: #ffffff;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
 }
 
+/* تنسيق النافذة المنبثقة */
+.taqwa-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  max-width: 90%;
+  width: 400px;
+  z-index: 999999;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  direction: rtl;
+  animation: popupFadeIn 0.3s ease;
+}
+
+/* تأثير ظهور النافذة */
 @keyframes popupFadeIn {
   from {
     opacity: 0;
@@ -13,73 +40,185 @@
   }
 }
 
-#taqwa-overlay {
-  animation: overlayFadeIn 0.3s ease-out;
+/* تنسيق العنوان */
+.taqwa-popup h2 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* تنسيق النص */
+.taqwa-popup p {
+  color: var(--light-text);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+/* تنسيق الآية */
+.taqwa-verse {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-right: 4px solid var(--primary-color);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  text-align: center;
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+}
+
+/* تنسيق مصدر الآية */
+.taqwa-verse-source {
+  display: block;
+  color: var(--light-text);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  font-style: italic;
+}
+
+/* تنسيق الأزرار */
+.taqwa-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.taqwa-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.taqwa-button.secondary {
+  background: var(--secondary-color);
+}
+
+.taqwa-button.secondary:hover {
+  background: #c0392b;
+}
+
+/* تنسيق أيقونات الأزرار */
+.taqwa-button i {
+  font-size: 1.2rem;
+}
+
+/* تنسيق زر إيقاف الصوت */
+#taqwa-audio-toggle {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#taqwa-audio-toggle:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* تنسيق رسالة الخطأ */
+.taqwa-error {
+  background: #fff3f3;
+  color: #e74c3c;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  border: 1px solid #ffcdd2;
+  animation: errorShake 0.5s ease;
+}
+
+@keyframes errorShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* تنسيق الخلفية المعتمة */
+.taqwa-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 999998;
+  animation: overlayFadeIn 0.3s ease;
 }
 
 @keyframes overlayFadeIn {
-  from {
-    opacity: 0;
-    backdrop-filter: blur(0px);
-  }
-  to {
-    opacity: 1;
-    backdrop-filter: blur(5px);
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* تأثيرات إضافية للنافذة المنبثقة */
-#taqwa-popup {
-  transition: all 0.3s ease;
+/* تنسيق الشعار */
+.taqwa-logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: block;
+  animation: logoSpin 1s ease;
 }
 
-#taqwa-popup:hover {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+@keyframes logoSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* تأثيرات للأزرار */
-#taqwa-popup a {
-  position: relative;
-  overflow: hidden;
+/* تنسيق التذكير */
+.taqwa-reminder {
+  background: #f1f8e9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-right: 4px solid #8bc34a;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #33691e;
+  text-align: center;
 }
 
-#taqwa-popup a::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-}
-
-#taqwa-popup a:hover::after {
-  transform: translateX(0);
-}
-
-/* تحسين التجاوب مع الشاشات الصغيرة */
+/* تنسيق للشاشات الصغيرة */
 @media (max-width: 480px) {
-  #taqwa-popup {
-    min-width: 90vw;
-    padding: 20px;
+  .taqwa-popup {
+    width: 95%;
+    padding: 1.5rem;
   }
-  
-  #taqwa-popup div:first-child {
-    font-size: 24px;
+
+  .taqwa-popup h2 {
+    font-size: 1.3rem;
   }
-  
-  #taqwa-popup div:nth-child(2) {
-    font-size: 14px;
-  }
-  
-  #taqwa-popup div:nth-child(3) {
-    font-size: 16px;
-  }
-  
-  #taqwa-popup a {
-    padding: 10px 20px;
-    font-size: 14px;
+
+  .taqwa-verse {
+    font-size: 1rem;
   }
 } 
